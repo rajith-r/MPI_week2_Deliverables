@@ -8,10 +8,10 @@
 //#include "serial_gaussian.h"
 //#include "mpi_gaussian.h"
 #include "cyclic_gaussian.h"
-#include "merge_sort.h"
 #include "benchmarks.h"
 
 int main(int argc, char* argv[]) {
+	MPI_Init(&argc, &argv);
 	//int scatter_result = scatter(argc, argv);
 	//int gaussian_result = serial_gaussian_elim();
 	//int mpi_gaussian_result = mpi_gaussian_elim(argc, argv);
@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 	//mergesort_mergepath(argc, argv);
 
 	//distributed mergesort using cyclic distribution of data
-	merge_sort_distributed(argc, argv,1<<4);
-
+	benchmark_merge_sort(argc, argv);
+	MPI_Finalize();
     return 0;
 }

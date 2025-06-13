@@ -21,6 +21,12 @@
     <ClCompile Include="scatter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="merge_sort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="benchmarks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="scatter.h">

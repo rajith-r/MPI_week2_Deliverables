@@ -141,6 +141,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="benchmarks.cpp" />
+    <ClCompile Include="merge_sort.cpp" />
     <ClCompile Include="mpi_course.cpp" />
     <ClCompile Include="scatter.cpp" />
   </ItemGroup>
