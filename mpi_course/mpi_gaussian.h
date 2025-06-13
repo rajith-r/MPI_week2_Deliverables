@@ -70,13 +70,13 @@ int mpi_gaussian_elim(int argc, char* argv[]) {
     MPI_Scatter(input_ptr.get(), dim* rows_per_proc, MPI_FLOAT, m_chunk.get(),
         dim * rows_per_proc, MPI_FLOAT, 0, MPI_COMM_WORLD);
 
-    for (int row = 0; row <= end_row; row++) {
+    for (int row = 0; row < dim; row++) {
 		int mapped_rank = row / rows_per_proc;
 		int local_row = row % rows_per_proc;
 		if (task_id == mapped_rank) {
 			// Normalize pivot row
 			float pivot_value = m_chunk[local_row * dim + row];
-			for (int col = 0; col < dim; col++) {
+			for (int col = row; col < dim; col++) {
 				m_chunk[local_row * dim + col] /= pivot_value;
 			}
 			// Send pivot row to all processes

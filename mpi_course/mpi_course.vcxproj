@@ -145,6 +145,9 @@
     <ClCompile Include="scatter.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="benchmarks.h" />
+    <ClInclude Include="cyclic_gaussian.h" />
+    <ClInclude Include="merge_sort.h" />
     <ClInclude Include="mpi_gaussian.h" />
     <ClInclude Include="serial_gaussian.h" />
     <ClInclude Include="scatter.h" />
